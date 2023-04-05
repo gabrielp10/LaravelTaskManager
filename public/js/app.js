@@ -3258,16 +3258,7 @@ function withinMaxClamp(min, value, max) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _bootstrap__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 /* harmony import */ var _bootstrap__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_bootstrap__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _components_SearchTasks_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/SearchTasks.vue */ "./resources/js/components/SearchTasks.vue");
-/* harmony import */ var _components_SearchTasks_vue__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_components_SearchTasks_vue__WEBPACK_IMPORTED_MODULE_1__);
 
-
-var app = new Vue({
-  el: '#app',
-  components: {
-    SearchTasks: (_components_SearchTasks_vue__WEBPACK_IMPORTED_MODULE_1___default())
-  }
-});
 
 /***/ }),
 
@@ -8036,16 +8027,6 @@ function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" =
 __webpack_require__.r(__webpack_exports__);
 // extracted by mini-css-extract-plugin
 
-
-/***/ }),
-
-/***/ "./resources/js/components/SearchTasks.vue":
-/*!*************************************************!*\
-  !*** ./resources/js/components/SearchTasks.vue ***!
-  \*************************************************/
-/***/ (() => {
-
-throw new Error("Module parse failed: Unexpected token (1:0)\nYou may need an appropriate loader to handle this file type, currently no loaders are configured to process this file. See https://webpack.js.org/concepts#loaders\n> <template>\n|   <div>\n|     <form @submit.prevent=\"searchTasks\">");
 
 /***/ })
 

@@ -7,15 +7,7 @@
         <title>Laravel Task Controller</title>
         <link rel="stylesheet" href="{{ asset('css/app.css') }}">
         <script src="{{ asset('js/app.js') }}" type="text/javascript"></script>
-        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-
-        
     </head>
-    <div id="app">
-      <search-tasks></search-tasks>
-    </div>
-    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-    <script src="{{ asset('js/app.js') }}"></script>
     <body class="antialiased">
         {{-- Navbar --}}
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -83,7 +75,7 @@
                       let badgeText = task.status === 'To-do' ? 'To-do' : 'Done';
                       html += '<div class="card-header">';
                       html += '<span class="fw-bolder">' + task.title + '</span>';
-                      html += '<span class="badge bg-warning">' + task.created_at_formatted + '</span>';
+                      html += '<span class="badge bg-warning text-dark">' + task.created_at_formatted + '</span>';
                       html += '<small>Last updated - ' + task.updated_at_formatted + '</small>';
                       html += '</div>';
                       html += '<div class="row">';

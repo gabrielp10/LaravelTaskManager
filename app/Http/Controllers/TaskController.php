@@ -124,4 +124,12 @@ class TaskController extends Controller
             'tasks' => $tasks,
         ]);
     }
+
+    public function apiIndex()
+    {
+        $tasks = Task::orderBy('id', 'desc')->get();
+        return response()->json([
+            'tasks' => $tasks,
+        ]);
+    }
 }
