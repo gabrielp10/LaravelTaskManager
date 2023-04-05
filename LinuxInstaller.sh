@@ -22,9 +22,12 @@ docker run --rm \
 # Generate the key
 ./vendor/bin/sail php artisan key:generate;
 
-# You can now access the project in 0.0.0.0:80 and PHPMyAdmin in 0.0.0.0:8080
-# Run the docker server
-./vendor/bin/sail up
-
 # Migrate the database on another terminal
-./vendor/bin/sail php artisan migrate
+./vendor/bin/sail php artisan migrate;
+
+# Run the docker server
+./vendor/bin/sail up;
+
+# You can now access the project in 0.0.0.0:80 and PHPMyAdmin in 0.0.0.0:8080
+
+
