@@ -17,3 +17,4 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [TaskController::class, 'index'])->name('index');
 Route::get('/tasks/search', [TaskController::class, 'search'])->name('task.search');
 Route::resource('task', TaskController::class);
+Route::get('/api/task-index/{query?}', [TaskController::class, 'searchTask'])->name('api.task.index');

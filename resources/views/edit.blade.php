@@ -2,14 +2,13 @@
 @section('main-index')
 <div>
   <div class="float-start">
-    <h4 class="pb-3">Edit Task - <span class="badge bg-info">{{ $task->title }}</span></h4>
+    <h4 class="pb-3">Edit Task - <span class="strong fw-bold">{{ $task->title }}</span></h4>
   </div>
   <div class="float-end">
-      <a href="{{route('task.index')}}" class="btn btn-info">All Tasks</a>
+    <a href="{{route('task.index')}}" class="btn btn-light border btn-sm">All Tasks</a>
   </div>
   <div class="clearfix"></div>
 </div>
-
 <div class="card card-body bg-light p-4">
   <form action="{{ route('task.update', $task->id) }}" method="POST">
     @csrf
@@ -30,7 +29,7 @@
         @endforeach
       </select>
     </div>
-    <button type="submit" class="btn btn-primary">Save</button>
+    <button type="submit" class="btn btn-info text-white float-end">Save</button>
   </form>
 </div>
 @endsection

@@ -12,8 +12,7 @@ class TaskController extends Controller
      */
     public function index()
     {
-        $tasks = Task::orderBy('id', 'desc')->get();
-        return view('index', compact('tasks'));
+        return view('index');
     }
     /**
      * Show the form for creating a new resource.
@@ -103,7 +102,7 @@ class TaskController extends Controller
     {
         $task = Task::findOrFail($id);
         $task->delete();
-        return redirect()->route('index');
+        return response()->json(['status' => 'success']);
     }
 
     public function search(Request $request)
@@ -125,9 +124,30 @@ class TaskController extends Controller
         ]);
     }
 
-    public function apiIndex()
+    public function searchTask(Request $request)
     {
-        $tasks = Task::orderBy('id', 'desc')->get();
+        $query = $request->query('query');
+    
+        if ($query) {
+            $tasks = Task::where('title', 'like', '%' . $query . '%')
+                ->orWhere('description', 'like', '%' . $query . '%')
+                ->orderBy('id', 'desc')
+                ->get()
+                ->map(function ($task) {
+                    $task->created_at_formatted = $task->created_at->diffForHumans();
+                    $task->updated_at_formatted = $task->updated_at->diffForHumans();
+                    return $task;
+                });
+        } else {
+            $tasks = Task::orderBy('id', 'desc')
+                ->get()
+                ->map(function ($task) {
+                    $task->created_at_formatted = $task->created_at->diffForHumans();
+                    $task->updated_at_formatted = $task->updated_at->diffForHumans();
+                    return $task;
+                });
+        }
+    
         return response()->json([
             'tasks' => $tasks,
         ]);
