@@ -1,6 +1,6 @@
 # Laravel Task Manager
 ![image](./ProjectScreenshot.png)
-This is a task manager built with **Laravel**, **Vue**, **Sail** (Docker) and **MySQL**. The project allows you to create, edit, and delete tasks, as well as search for them. The project uses Laravel's Resource Controller to create a *RESTful API* for the backend, and Vue for the frontend.
+This is a task manager built with **Laravel**, **Blade**, **Vue**, **Sail** (Docker) and **MySQL**. The project allows you to create, edit, and delete tasks, as well as search for them. The project uses Laravel's Resource Controller to create a *RESTful API* for the backend, and Vue for the frontend.
 
 ## Installation
 
